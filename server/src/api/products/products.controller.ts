@@ -1,8 +1,11 @@
 import { Request, Response, NextFunction } from 'express';
+import { Product } from './products.models';
+
+let Products: Product[] = [];
 
 export let controller = {
     get: (req: Request, res: Response, next: NextFunction) => {
-        res.json({ok: true});
+        res.json(Products);
     },
     getById: (req: Request, res: Response, next: NextFunction) => {
         res.json({ok: true});

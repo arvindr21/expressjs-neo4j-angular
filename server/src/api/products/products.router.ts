@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { controller } from './sample.controller';
+import { controller } from './products.controller';
 
 let router = Router();
 
@@ -12,4 +12,4 @@ router.route('/:id')
     .put(controller.put)
     .delete(controller.delete);
 
-export let sampleRouter = router;
+export let productsRouter = router;
